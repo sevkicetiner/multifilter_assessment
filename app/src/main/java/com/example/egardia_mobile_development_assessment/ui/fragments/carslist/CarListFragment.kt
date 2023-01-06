@@ -1,6 +1,5 @@
 package com.example.egardia_mobile_development_assessment.ui.fragments.carslist
 
-import android.app.Activity
 import android.content.ContentValues
 import android.content.ContentValues.TAG
 import android.os.Bundle
@@ -18,18 +17,14 @@ import com.example.egardia_mobile_development_assessment.R
 import com.example.egardia_mobile_development_assessment.data.model.CarsItem
 import com.example.egardia_mobile_development_assessment.databinding.FragmentCarlistBinding
 import com.example.egardia_mobile_development_assessment.ui.CarListAdapter
-import com.example.egardia_mobile_development_assessment.utils.ActionMenuStateNotifier
 import com.example.egardia_mobile_development_assessment.utils.FilterEvent
 import com.example.egardia_mobile_development_assessment.utils.Status
-import com.example.egardia_mobile_development_assessment.utils.carlistFromUitls
 import com.google.gson.Gson
-import okhttp3.Cache
-
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
-class CarListFragment : Fragment(), ActionMenuStateNotifier, View.OnClickListener {
+class CarListFragment : Fragment(), View.OnClickListener {
 
     private var _binding: FragmentCarlistBinding? = null
     lateinit var carListVM: CarListViewModel
@@ -81,10 +76,6 @@ class CarListFragment : Fragment(), ActionMenuStateNotifier, View.OnClickListene
     }
 
     var filterState: Boolean = false
-    override fun filterClikced() {
-        filterState = !filterState
-        binding.filterLinear.isVisible = filterState
-    }
 
     override fun onClick(p0: View?) {
         when (p0) {

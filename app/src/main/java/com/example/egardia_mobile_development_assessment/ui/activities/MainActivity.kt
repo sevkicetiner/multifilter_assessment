@@ -10,9 +10,6 @@ import android.view.Menu
 import android.view.MenuItem
 import com.example.egardia_mobile_development_assessment.R
 import com.example.egardia_mobile_development_assessment.databinding.ActivityMainBinding
-import com.example.egardia_mobile_development_assessment.ui.fragments.carslist.CarListFragment
-import com.example.egardia_mobile_development_assessment.ui.fragments.filter.FilterFragment
-import com.example.egardia_mobile_development_assessment.utils.ActionMenuStateNotifier
 import com.example.egardia_mobile_development_assessment.utils.FilterEvent
 
 class MainActivity : AppCompatActivity() {
